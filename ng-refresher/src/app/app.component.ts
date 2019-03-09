@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   // 1.
-  persons: string[] = ['Gaurav', 'Saurav', 'Sangeeta', 'Sarita'];
+  persons: string[] = ['Checken', 'Paneer', 'Soya', 'Masroom'];
 }
