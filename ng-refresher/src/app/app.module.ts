@@ -3,11 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+// 5.
+import { PersonComponent } from './persons/persons.component';
 
 @NgModule({
   declarations: [
     // imports components here
-    AppComponent
+    AppComponent,
+    PersonComponent
   ],
   imports: [
     // imports other modules here
@@ -16,6 +19,7 @@ import { AppComponent } from './app.component';
   providers: [
     // import services here
   ],
+
   // this is only use in your main module like app module aka ROOT component
   bootstrap: [AppComponent]
 })
