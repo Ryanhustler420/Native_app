@@ -4,9 +4,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-// 5.
+
 import { PersonComponent } from './persons/persons.component';
 import { PersonInputComponent } from './persons/person-input.component';
+// 6.
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { PersonInputComponent } from './persons/person-input.component';
   imports: [
     // imports other modules here
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     // import services here
