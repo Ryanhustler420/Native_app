@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
     // if this not provide than you have to manually
@@ -6,14 +7,23 @@ import { Injectable } from '@angular/core';
     providedIn: 'root'
 })
 export class PersonService {
+    // whenever referance type or object or array aka reference type changes in
+    // angular it won't render the component again
+    // because the reference is already in memory and it is just pointer which get attach
+    // to new value in the array so the pointer head will be the same as before
+
+    // Subject is as same as EventEmitter.
+    // Actullay EventEmitter is build on top of Subject
+    personChanged = new Subject<string[]>();
     persons: string[] = ['Checken', 'Paneer', 'Soya', 'Masroom'];
 
     addPerson(name: string) {
         this.persons.push(name);
+        this.personChanged.next(this.persons);
     }
 
     removePerson(name: string) {
         this.persons = this.persons.filter(person => person !== name);
-        console.log(this.persons);
+        this.personChanged.next(this.persons);
     }
 }
