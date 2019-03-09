@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-person-input',
@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
     styleUrls: ['./person-input.component.css']
 })
 export class PersonInputComponent {
-    input: string;
+    input = '';
 
-    onCreatePerson(el: string) {
-        console.log(`created a person ${el}`);
+    onCreatePerson() {
+        console.log(`created a person ${this.input}`);
+        this.input = '';
     }
 }

@@ -1,6 +1,7 @@
 // BrowserModule is simple module which unlock some feature which is used by angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 // 5.
@@ -16,7 +17,8 @@ import { PersonInputComponent } from './persons/person-input.component';
   ],
   imports: [
     // imports other modules here
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [
     // import services here
