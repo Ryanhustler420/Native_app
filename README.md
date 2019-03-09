@@ -7,6 +7,6 @@
 - Angular CLI
   - npm install -g @angular/cli
 
-> Initialize an appEPERM: operation not permitted
+> Initialize an app
 
 - ng new ng-refresher
