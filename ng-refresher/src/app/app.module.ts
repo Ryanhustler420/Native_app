@@ -9,6 +9,7 @@ import { PersonComponent } from './persons/persons.component';
 import { PersonInputComponent } from './persons/person-input.component';
 // 6.
 import { AppRoutingModule } from './app-routing.module';
+// import { PersonService } from './persons/persons.service';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   providers: [
     // import services here
+    // PersonService
   ],
 
   // this is only use in your main module like app module aka ROOT component
