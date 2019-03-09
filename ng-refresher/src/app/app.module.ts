@@ -5,12 +5,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 // 5.
 import { PersonComponent } from './persons/persons.component';
+import { PersonInputComponent } from './persons/person-input.component';
 
 @NgModule({
   declarations: [
     // imports components here
     AppComponent,
-    PersonComponent
+    PersonComponent,
+    PersonInputComponent
   ],
   imports: [
     // imports other modules here
