@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
     // if this not provide than you have to manually
@@ -15,7 +16,15 @@ export class PersonService {
     // Subject is as same as EventEmitter.
     // Actullay EventEmitter is build on top of Subject
     personChanged = new Subject<string[]>();
-    persons: string[] = ['Checken', 'Paneer', 'Soya', 'Masroom'];
+    persons: string[] = [];
+
+    constructor(private http: HttpClient) { }
+
+    fetchPersons() {
+        return this.http.get<any>('https://swapi.co/api/people').subscribe(resData => {
+            console.log(resData);
+        });
+    }
 
     addPerson(name: string) {
         this.persons.push(name);
