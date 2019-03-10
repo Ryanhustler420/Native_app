@@ -8,6 +8,7 @@ import { Subscription } from 'rxjs';
 })
 export class PersonComponent implements OnInit, OnDestroy {
     personList: string[];
+    isFetching = false;
     private personListSubscription: Subscription;
 
     constructor(private personService: PersonService) {
@@ -19,7 +20,9 @@ export class PersonComponent implements OnInit, OnDestroy {
         // this.personList = this.personService.persons;
         this.personListSubscription = this.personService.personChanged.subscribe((persons) => {
             this.personList = persons;
+            this.isFetching = false;
         });
+        this.isFetching = true;
         this.personService.fetchPersons();
     }
 
