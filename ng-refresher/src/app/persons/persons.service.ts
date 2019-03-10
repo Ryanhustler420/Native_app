@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
+import { map } from 'rxjs/operators';
+
 @Injectable({
     // if this not provide than you have to manually
     // set in providers array in app.module.ts file
@@ -21,9 +23,13 @@ export class PersonService {
     constructor(private http: HttpClient) { }
 
     fetchPersons() {
-        return this.http.get<any>('https://swapi.co/api/people').subscribe(resData => {
-            console.log(resData);
-        });
+        return this.http.get<any>('https://swapi.co/api/people')
+            .pipe(map(resData => {
+                // filtering the obj and send the array as transform array
+                return resData.results.map(character => character.name);
+            })).subscribe(transformDate => {
+                this.personChanged.next(transformDate);
+            });
     }
 
     addPerson(name: string) {

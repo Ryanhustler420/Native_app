@@ -17,10 +17,10 @@ export class PersonComponent implements OnInit, OnDestroy {
     // Life cycle hooks for initilaztion work
     ngOnInit() {
         // this.personList = this.personService.persons;
-        this.personService.fetchPersons();
         this.personListSubscription = this.personService.personChanged.subscribe((persons) => {
             this.personList = persons;
         });
+        this.personService.fetchPersons();
     }
 
     onRemovePerson(personName: string) {
