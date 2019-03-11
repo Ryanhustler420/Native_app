@@ -6,4 +6,11 @@ import { Component } from "@angular/core";
     styleUrls: ['./current-challenge.component.css'],
     moduleId: module.id
 })
-export class CurrentChallengeComponent {}
+export class CurrentChallengeComponent {
+    challengeDescription = '';
+    currentChallenge = '';
+
+    onSetChallenge() {
+        this.currentChallenge = this.challengeDescription;
+    }
+}
