@@ -43,3 +43,4 @@
 ##### Create Component With Angular CLI
 
 > ng g c layouts/stack
+> ng g c layouts/flexbox
