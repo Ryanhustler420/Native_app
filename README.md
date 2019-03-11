@@ -10,3 +10,21 @@
 > Initialize an app
 
 - ng new ng-refresher
+
+##### [Native Script Installation Process](https://docs.nativescript.org/angular/start/quick-setup#quick-setup)
+
+> install nodejs
+> npm install -g nativescript
+> install Android Studio
+> install jdk (atleast 8.x) [run below command it will ask you for the jdk installation]
+> @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://www.nativescript.org/setup/win'))" (Run as Administrator)
+
+1.  Answer in sequence
+    -  y
+    -  y
+    -  y
+    -  y
+
+> check setup with command **tns doctor**
+> create project with command **tns create**
+> go to project directory and run **tns run android --bundle**
