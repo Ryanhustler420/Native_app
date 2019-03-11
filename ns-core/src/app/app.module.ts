@@ -5,6 +5,7 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 import { AppComponent } from "./app.component";
 import { CurrentChallengeComponent } from './challenges/current-challenge/current-challenge.component';
+import { StackComponent } from './layouts/stack/stack.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -23,7 +24,8 @@ import { CurrentChallengeComponent } from './challenges/current-challenge/curren
     ],
     declarations: [
         AppComponent,
-        CurrentChallengeComponent
+        CurrentChallengeComponent,
+        StackComponent
     ],
     providers: [],
     schemas: [

@@ -36,3 +36,10 @@
 `open Android Studio on Windows/Mac and open project folder select 'platforms' folder and than run emulator. make an AVD and run that emulator on PC/MAC. and than hit command given below on cmd`
 
 > go to project directory and run **tns run android --bundle**
+
+
+## Angular CLI in Action
+
+##### Create Component With Angular CLI
+
+> ng g c layouts/stack
