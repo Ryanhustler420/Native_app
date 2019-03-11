@@ -1,0 +1,8 @@
+StackLayout {
+    border-color: red;
+    border-width: 5;
+}
+/*
+    this css file will only effect current-challenge file
+    while app.css file is globle style
+*/
