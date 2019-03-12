@@ -15,6 +15,7 @@ declare var android: any;
 export class ActionBarComponent implements OnInit {
 
     @Input() title = "";
+    @Input() showBackButton = true;
 
     constructor(private page: Page, private router: RouterExtensions) { }
 
@@ -22,7 +23,7 @@ export class ActionBarComponent implements OnInit {
     }
 
     get canGoBack() {
-        return this.router.canGoBack();
+        return this.router.canGoBack() && this.showBackButton;
     }
 
     onGoBack() {
