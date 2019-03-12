@@ -10,7 +10,7 @@ export class ChallengeEditComponent {
     @Output() input = new EventEmitter<string>();
     challengeDescription = '';
 
-    onSetChallenge() {
+    onAddChallenge() {
         this.input.emit(this.challengeDescription);
     }
 
