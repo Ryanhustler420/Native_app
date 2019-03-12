@@ -36,3 +36,34 @@
 `open Android Studio on Windows/Mac and open project folder select 'platforms' folder and than run emulator. make an AVD and run that emulator on PC/MAC. and than hit command given below on cmd`
 
 > go to project directory and run **tns run android --bundle**
+
+
+## Angular CLI in Action
+
+##### Create Component With Angular CLI
+
+> ng g c layouts/stack
+> ng g c layouts/flexbox
+> ng g c layouts/grid
+> ng g c layouts/absolute
+
+> ng g c challenges/challenge-edit
+
+
+##### Debuggin
+
+> tns debug android --bundle
+> tns debug ios --bundle
+
+than,
+
+> copy the url in the console and paste in broweser
+> chrome-devtools://devtools/bundled/inspector.html?experiments=truews=localhost:40000
+
+More, You can go to:
+
+```
+VS code -> Debug -> Open Configration -> NativeScript
+```
+
+it will open launch.json file and where you can chaneg debug settings related to nativeScript
