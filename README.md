@@ -48,3 +48,22 @@
 > ng g c layouts/absolute
 
 > ng g c challenges/challenge-edit
+
+
+##### Debuggin
+
+> tns debug android --bundle
+> tns debug ios --bundle
+
+than,
+
+> copy the url in the console and paste in broweser
+> chrome-devtools://devtools/bundled/inspector.html?experiments=truews=localhost:40000
+
+More, You can go to:
+
+```
+VS code -> Debug -> Open Configration -> NativeScript
+```
+
+it will open launch.json file and where you can chaneg debug settings related to nativeScript

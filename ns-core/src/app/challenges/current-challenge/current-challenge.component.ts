@@ -8,9 +8,5 @@ import { ItemEventData } from 'tns-core-modules/ui/list-view';
     moduleId: module.id
 })
 export class CurrentChallengeComponent {
-    @Input() challenges: Array<string> = [];
-
-    onItemTap(args: ItemEventData) {
-        console.log(args)
-    }
+    @Input() challengeTitle = '';
 }
