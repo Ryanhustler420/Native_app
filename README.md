@@ -49,6 +49,7 @@
 
 > ng g c challenges/challenge-edit
 > ng g c auth
+> ng g c shared/ui/action-bar
 
 
 ##### Debuggin
