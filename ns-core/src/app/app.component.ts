@@ -5,4 +5,10 @@ import { Component } from "@angular/core";
     moduleId: module.id,
     templateUrl: "./app.component.html"
 })
-export class AppComponent { }
+export class AppComponent {
+    enteredChallenge = '';
+
+    onChallengeInput(challengeDescription: string) {
+        this.enteredChallenge = challengeDescription;
+    }
+}

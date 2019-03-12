@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: 'ns-current-challenge',
@@ -7,5 +7,5 @@ import { Component } from "@angular/core";
     moduleId: module.id
 })
 export class CurrentChallengeComponent {
-
+    @Input() currentChallenge = "";
 }
