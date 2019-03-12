@@ -1,5 +1,16 @@
-<ScrollView>
+<ListView [items]="challenges" (itemTap)="onItemTap($event)">
+    <ng-template>
+        <GridLayout rows="40,auto" columns="50, *">
+            <Label text="Item" row="0" col="0" rowSpan="2"></Label>
+            <Label text="Item content" row="0" col="1"></Label>
+            <Label text="Item content row 2" row="1" col="1"></Label>
+        </GridLayout>
+    </ng-template>
+</ListView>
+
+
+<!-- <ScrollView>
     <StackLayout>
         <Label class="title" *ngFor="let challenge of challenges" [text]="challenge" horizontalAlignment="center"></Label>
     </StackLayout>
-</ScrollView>
+</ScrollView> -->
