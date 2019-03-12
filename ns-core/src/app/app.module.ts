@@ -9,6 +9,7 @@ import { StackComponent } from './layouts/stack/stack.component';
 import { FlexboxComponent } from './layouts/flexbox/flexbox.component';
 import { GridComponent } from './layouts/grid/grid.component';
 import { AbsoluteComponent } from './layouts/absolute/absolute.component';
+import { ChallengeEditComponent } from './challenges/challenge-edit/challenge-edit.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -31,7 +32,8 @@ import { AbsoluteComponent } from './layouts/absolute/absolute.component';
         StackComponent,
         FlexboxComponent,
         GridComponent,
-        AbsoluteComponent
+        AbsoluteComponent,
+        ChallengeEditComponent
     ],
     providers: [],
     schemas: [

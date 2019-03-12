@@ -46,3 +46,5 @@
 > ng g c layouts/flexbox
 > ng g c layouts/grid
 > ng g c layouts/absolute
+
+> ng g c challenges/challenge-edit
