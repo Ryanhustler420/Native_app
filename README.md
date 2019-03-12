@@ -48,6 +48,7 @@
 > ng g c layouts/absolute
 
 > ng g c challenges/challenge-edit
+> ng g c auth
 
 
 ##### Debuggin
