@@ -1,16 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'ns-auth',
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css'],
-  moduleId: module.id,
+    selector: 'ns-auth',
+    templateUrl: './auth.component.html',
+    styleUrls: ['./auth.component.css'],
+    moduleId: module.id,
 })
 export class AuthComponent implements OnInit {
 
-  constructor() { }
+    constructor(private router: Router) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+
+    onSignin() {
+        this.router.navigate(['/today'])
+    }
 
 }
