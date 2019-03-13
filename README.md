@@ -76,3 +76,13 @@ it will open launch.json file and where you can chaneg debug settings related to
 
 ##### Links
 - [NativeScript UI SideDrawer](https://www.npmjs.com/package/nativescript-ui-sidedrawer)
+
+##### Issue Resolve
+
+- SideDrawer Bug
+  - Delete These Files/Folder And than run ``npm install`` and run ``tns run android/ios --bundle``
+    - hooks
+    - node_modules
+    - platform
+    - package-lock.json
+    - webpack.config.js
