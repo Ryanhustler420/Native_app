@@ -52,6 +52,9 @@
 > ng g c shared/ui/action-bar
 > ng g c challenges/challenge-tabs
 
+##### Packages
+
+> npm i nativescript-ui-sidedrawer
 
 ##### Debuggin
 
@@ -70,3 +73,6 @@ VS code -> Debug -> Open Configration -> NativeScript
 ```
 
 it will open launch.json file and where you can chaneg debug settings related to nativeScript
+
+##### Links
+- [NativeScript UI SideDrawer](https://www.npmjs.com/package/nativescript-ui-sidedrawer)
