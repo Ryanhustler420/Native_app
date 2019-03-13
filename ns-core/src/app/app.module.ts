@@ -10,6 +10,7 @@ import { TodayComponent } from './challenges/today/today.component';
 import { AuthComponent } from './auth/auth.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ActionBarComponent } from './shared/ui/action-bar/action-bar.component';
+import { ChallengeTabsComponent } from './challenges/challenge-tabs/challenge-tabs.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -33,7 +34,8 @@ import { ActionBarComponent } from './shared/ui/action-bar/action-bar.component'
         ChallengeEditComponent,
         TodayComponent,
         AuthComponent,
-        ActionBarComponent
+        ActionBarComponent,
+        ChallengeTabsComponent
     ],
     providers: [],
     schemas: [
