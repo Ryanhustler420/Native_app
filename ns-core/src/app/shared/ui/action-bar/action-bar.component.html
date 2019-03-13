@@ -1,8 +1,8 @@
 <ActionBar [title]="title" (loaded)="onLoadedActionBar()">
     <NavigationButton text="Back" android.systemIcon="ic_menu_back" *ngIf="canGoBack" (tap)="onGoBack()"></NavigationButton>
-    <NavigationButton icon="res://menu_black"></NavigationButton>
+    <NavigationButton *ngIf="android" icon="res://menu_black"></NavigationButton>
     <!-- <ActionItem ios.position="left"></ActionItem> for ios and android. in android we can postion icon on the right side using this -->
-    <ActionItem ios.position="left">
+    <ActionItem *ngIf="!android" ios.position="left">
         <Label text="MENU"></Label>
     </ActionItem>
 </ActionBar>

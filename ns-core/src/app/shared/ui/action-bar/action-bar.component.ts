@@ -22,6 +22,10 @@ export class ActionBarComponent implements OnInit {
     ngOnInit() {
     }
 
+    get android() {
+        return isAndroid;
+    }
+
     get canGoBack() {
         return this.router.canGoBack() && this.showBackButton;
     }
