@@ -39,6 +39,10 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
         this.changeDetectionRef.detectChanges();
     }
 
+    onLogout() {
+        this.uiService.toggleDrawer();
+    }
+
     onChallengeInput(challengeDescription: string) {
         this.activeChallenge = challengeDescription;
         // console.log("onChallengeInput", challengeDescription);
