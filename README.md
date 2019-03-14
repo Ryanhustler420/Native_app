@@ -48,7 +48,14 @@
 > ng g c layouts/absolute
 
 > ng g c challenges/challenge-edit
+> ng g c auth
+> ng g c shared/ui/action-bar
+> ng g c challenges/challenge-tabs
+> ng g c challenges/day-modal
 
+##### Packages
+
+> npm i nativescript-ui-sidedrawer
 
 ##### Debuggin
 
@@ -67,3 +74,16 @@ VS code -> Debug -> Open Configration -> NativeScript
 ```
 
 it will open launch.json file and where you can chaneg debug settings related to nativeScript
+
+##### Links
+- [NativeScript UI SideDrawer](https://www.npmjs.com/package/nativescript-ui-sidedrawer)
+
+##### Issue Resolve
+
+- SideDrawer Bug
+  - Delete These Files/Folder And than run ``npm install`` and run ``tns run android/ios --bundle``
+    - hooks
+    - node_modules
+    - platform
+    - package-lock.json
+    - webpack.config.js

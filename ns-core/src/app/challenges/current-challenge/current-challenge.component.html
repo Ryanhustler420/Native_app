@@ -1,21 +1,15 @@
+<ns-action-bar title="Current Challenge" [showBackButton]="false">
+
+    <ActionItem ios.position="right" android.position="actionBar" pageTransition="slideLeft" nsRouterLink="/challenges/replace">
+        <Label text="Replace"></Label>
+    </ActionItem>
+
+    <ActionItem ios.position="right" pageTransition="slideLeft" android.position="actionBar" nsRouterLink="/challenges/edit">
+        <Label text="Edit"></Label>
+    </ActionItem>
+
+</ns-action-bar>
 <StackLayout>
-    <Label class="title" [text]="challengeTitle" horizontalAlignment="center"></Label>
+    <Label class="title" text="The current Challenge" horizontalAlignment="center"></Label>
+    <Button class="btn" text="Change Status" (tap)="onChangeStatus()"></Button>
 </StackLayout>
-
-<!-- <ListView [items]="challenges" (itemTap)="onItemTap($event)" iosEstimatedRowHeight="65">
-    <ng-template let-challenge="item" let-i="index">
-        item is a reverse keyword for ListView Check Docs
-        <GridLayout rows="40,20" columns="50, *">
-            <Label [text]="i" row="0" col="0" rowSpan="2"></Label>
-            <Label [text]="challenge" row="0" col="1"></Label>
-            <Label text="Item content row 2" row="1" col="1"></Label>
-        </GridLayout>
-    </ng-template>
-</ListView> -->
-
-
-<!-- <ScrollView>
-    <StackLayout>
-        <Label class="title" *ngFor="let challenge of challenges" [text]="challenge" horizontalAlignment="center"></Label>
-    </StackLayout>
-</ScrollView> -->
