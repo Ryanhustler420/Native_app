@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptCommonModule } from 'nativescript-angular/common';
 
 import { ChallengeTabsComponent } from './challenge-tabs/challenge-tabs.component';
@@ -18,7 +18,10 @@ import { ChallengesRoutingModule } from './challenges-routing.module';
         NativeScriptCommonModule,
         ChallengesRoutingModule,
         SharedModule
-    ]
+    ],
+    schemas: [
+        NO_ERRORS_SCHEMA
+    ],
 })
 
 export class ChallengesModule { }
