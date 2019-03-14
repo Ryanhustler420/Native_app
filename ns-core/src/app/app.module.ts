@@ -12,6 +12,7 @@ import { AuthComponent } from './auth/auth.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ActionBarComponent } from './shared/ui/action-bar/action-bar.component';
 import { ChallengeTabsComponent } from './challenges/challenge-tabs/challenge-tabs.component';
+import { DayModalComponent } from './challenges/day-modal/day-modal.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -37,12 +38,19 @@ import { ChallengeTabsComponent } from './challenges/challenge-tabs/challenge-ta
         TodayComponent,
         AuthComponent,
         ActionBarComponent,
-        ChallengeTabsComponent
+        ChallengeTabsComponent,
+        DayModalComponent
     ],
     providers: [],
     schemas: [
         NO_ERRORS_SCHEMA
-    ]
+    ],
+    // entryComponent help us when we want to load a component which could be created but you
+    // are not using that component anywhere eles so 'entryComponent' will be prepare for render
+    // that component. more on the DOCS
+
+    // https://github.com/NativeScript/nativescript-sdk-examples-ng/blob/master/app/ng-ui-category/modal-view-ng/modal-view-examples.module.ts
+    entryComponents: [DayModalComponent]
 })
 /*
 Pass your application module to the bootstrapModule function located in main.ts to start your app

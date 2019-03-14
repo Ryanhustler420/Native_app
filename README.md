@@ -51,6 +51,7 @@
 > ng g c auth
 > ng g c shared/ui/action-bar
 > ng g c challenges/challenge-tabs
+> ng g c challenges/day-modal
 
 ##### Packages
 
