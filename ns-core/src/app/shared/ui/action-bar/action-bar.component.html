@@ -5,4 +5,9 @@
     <ActionItem *ngIf="!android && hasMenu" ios.position="left" (tap)="onToggleMenu()">
         <Label text="MENU"></Label>
     </ActionItem>
+    <!-- <ActionItem>
+        <Label text="Replace"></Label>
+    </ActionItem> -->
+    <!-- with ng-content we can pass XML from outside the actionbar -->
+    <ng-content></ng-content>
 </ActionBar>
