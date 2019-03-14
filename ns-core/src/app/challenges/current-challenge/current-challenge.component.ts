@@ -18,6 +18,8 @@ export class CurrentChallengeComponent {
             fullscreen: true,
             context: { date: new Date() },
             viewContainerRef: this.uiService.getRootVCRef() ? this.uiService.getRootVCRef() : this._vcRef
-        });
+        }).then((status: string) => {
+            console.log(status);
+        })
     }
 }

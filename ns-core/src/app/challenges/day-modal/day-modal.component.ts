@@ -16,4 +16,8 @@ export class DayModalComponent implements OnInit {
         this.loadedDate = (this.modalParams.context as { date: Date }).date
     }
 
+    onHandleInput(status: string) {
+        // this data can be read from the place where we open the dialog
+        this.modalParams.closeCallback(status);
+    }
 }
