@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, ViewContainerRef } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 
 @Injectable({
@@ -6,6 +6,7 @@ import { BehaviorSubject } from "rxjs";
 })
 export class UIService {
     private _drawerState = new BehaviorSubject<void>(null);
+    private _rootVCRef: ViewContainerRef;
 
     get drawerState() {
         return this._drawerState.asObservable();
@@ -13,5 +14,13 @@ export class UIService {
 
     toggleDrawer() {
         this._drawerState.next(null);
+    }
+
+    setRootVCRef(vcRef: ViewContainerRef) {
+        this._rootVCRef = vcRef;
+    }
+
+    getRootVCRef(): ViewContainerRef {
+        return this._rootVCRef;
     }
 }
