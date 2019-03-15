@@ -37,6 +37,11 @@ ActionBar {
     }
 }
 
+.h1 {
+    font-weight: bold;
+    color: $primary;
+}
+
 .btn-flat {
     background: transparent;
     border-color: transparent;

@@ -7,8 +7,8 @@ import { UIService } from "~/app/shared/ui/ui.service";
     selector: 'ns-current-challenge',
     templateUrl: './current-challenge.component.html',
     styleUrls: [
-        './current-challenge.component.common.css',
-        './current-challenge.component.css'
+        './_current-challenge.component.common.scss',
+        './current-challenge.component.scss'
     ],
     moduleId: module.id
 })
