@@ -1,0 +1,6 @@
+@import "./app.common.css";
+
+.btn {
+    background: #7c015d;
+    color: #fff;
+}

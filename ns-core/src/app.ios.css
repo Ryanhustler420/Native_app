@@ -1,0 +1,6 @@
+@import "./app.common.css";
+
+.btn {
+    background: transparent;
+    color: #7c015d;
+}
