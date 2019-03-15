@@ -12,6 +12,11 @@ $btn-color: $primary;
 
 @import '~nativescript-theme-core/scss/index';
 
+ActionBar {
+    background: $primary;
+    color: white;
+}
+
 // .drawer-container {
 //     background: linear-gradient(140deg, #2b0c72, #5c3fa0);
 //     flex-direction: column;
