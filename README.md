@@ -87,3 +87,7 @@ it will open launch.json file and where you can chaneg debug settings related to
     - platform
     - package-lock.json
     - webpack.config.js
+
+##### Using Sass
+
+> tns install sass
