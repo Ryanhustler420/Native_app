@@ -9,9 +9,17 @@
     </ActionItem>
 
 </ns-action-bar>
-<FlexboxLayout class="page">
-    <Label class="h1 text-center" text="Take a walk every day"></Label>
-    <Label class="body text-center" text="Walk for at least 20 minutes on everyday of the week"></Label>
-</FlexboxLayout>
+<ScrollView>
+    <FlexboxLayout class="page">
+        <StackLayout>
+            <Label class="h1 text-center" text="Take a walk every day"></Label>
+            <Label class="body text-center" text="Walk for at least 20 minutes on everyday of the week"></Label>
+        </StackLayout>
+        <GridLayout rows="auto,*,*,*,*,*,*" columns="*,*,*,*,*,*,*">
+            <Label class="text-center" width="100%" *ngFor="let weekDay of weekDays; let i = index" [text]="weekDay"
+                row="0" [col]="i"></Label>
+        </GridLayout>
+    </FlexboxLayout>
+</ScrollView>
 
 <!-- https://docs.nativescript.org/angular/ui/styling -->
