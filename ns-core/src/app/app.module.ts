@@ -9,6 +9,7 @@ import { NativeScriptUISideDrawerModule } from 'nativescript-ui-sidedrawer/angul
 import { AppComponent } from "./app.component";
 import { AuthComponent } from './auth/auth.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ChallengeActionModule } from './challenges/challenge-actions/challenge-action.module';
 import { SharedModule } from './shared/ui/shared.module';
 import { DayModalComponent } from './challenges/day-modal/day-modal.component';
 
@@ -27,7 +28,8 @@ import { DayModalComponent } from './challenges/day-modal/day-modal.component';
         NativeScriptFormsModule,
         NativeScriptUISideDrawerModule,
         AppRoutingModule,
-        SharedModule
+        SharedModule,
+        ChallengeActionModule
     ],
     declarations: [
         AppComponent,

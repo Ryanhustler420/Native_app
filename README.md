@@ -52,6 +52,7 @@
 > ng g c shared/ui/action-bar
 > ng g c challenges/challenge-tabs
 > ng g c challenges/day-modal
+> ng g c challenges/challenge-actions
 
 ##### Packages
 

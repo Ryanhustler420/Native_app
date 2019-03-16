@@ -18,7 +18,7 @@
         <GridLayout rows="auto,*,*,*,*,*,*" columns="*,*,*,*,*,*,*">
             <Label class="text-center week-day-label" width="100%" *ngFor="let weekDay of weekDays; let i = index"
                 [text]="weekDay" row="0" [col]="i"></Label>
-            <FlexboxLayout class="day not-settable" [row]="getRow(i, day)" *ngFor="let day of days; let i = index"
+            <FlexboxLayout (tap)="onChangeStatus()" class="day not-settable" [row]="getRow(i, day)" *ngFor="let day of days; let i = index"
                 [col]="day.dayInWeek">
                 <Label [text]="day.dayInMonth"></Label>
             </FlexboxLayout>
