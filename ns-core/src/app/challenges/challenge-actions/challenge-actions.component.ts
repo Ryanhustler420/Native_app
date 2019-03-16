@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
     selector: 'ns-challenge-actions',
@@ -8,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChallengeActionsComponent implements OnInit {
 
+    @Output() actionSelect = new EventEmitter<'complete' | 'fail' | 'cancle'>();
+    @Input() cancelText = "Cancel";
+
     constructor() { }
 
     ngOnInit() {
+    }
+
+    onAction(action: 'complete' | 'fail' | 'cancle') {
+        this.actionSelect.emit(action);
     }
 
 }
