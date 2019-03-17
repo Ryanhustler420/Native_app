@@ -81,6 +81,8 @@ it will open launch.json file and where you can chaneg debug settings related to
 
 ##### Issue Resolve
 
+> this bug happens when you add extra resources to the project
+
 - SideDrawer Bug
   - Delete These Files/Folder And than run ``npm install`` and run ``tns run android/ios --bundle``
     - hooks

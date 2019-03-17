@@ -3,7 +3,7 @@
     <NavigationButton *ngIf="android && hasMenu" icon="res://menu_black" (tap)="onToggleMenu()"></NavigationButton>
     <!-- <ActionItem ios.position="left"></ActionItem> for ios and android. in android we can postion icon on the right side using this -->
     <ActionItem *ngIf="!android && hasMenu" ios.position="left" (tap)="onToggleMenu()">
-        <Label text="MENU"></Label>
+        <Label text="&#xf0c9;" class="fa m-5"></Label>
     </ActionItem>
     <!-- <ActionItem>
         <Label text="Replace"></Label>

@@ -65,3 +65,9 @@ ActionBar {
     margin: 5 0;
     border-color: #7c015d;
 } */
+
+.fa {
+    // this font-family should name exactly the same as file in the src file
+    // ios // android
+    font-family: 'FontAwesome','Font-Awesome';
+}

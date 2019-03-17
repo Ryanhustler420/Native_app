@@ -12,7 +12,7 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
     declarations: [ChallengeEditComponent],
     imports: [
         NativeScriptCommonModule,
-        NativeScriptRouterModule,
+        // NativeScriptRouterModule,
         NativeScriptRouterModule.forChild([{ path: '', component: ChallengeEditComponent }]),
         SharedModule
     ],
