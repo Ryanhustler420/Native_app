@@ -21,25 +21,29 @@ ActionBar {
     align-items: center;
 }
 
-.input-field {
-    width: 80%;
+.form {
+    .input-field {
+        width: 80%;
 
-    // for label specificity we have to nest the classes
-    .label {
-        color: $primary;
-        font-weight: bold;
-    }
+        // for label specificity we have to nest the classes
+        .label {
+            color: $primary;
+            font-weight: bold;
+            font-family: 'Oswald', 'Oswald-Regular', 'Oswald-Bold';
+        }
 
-    .input {
-        border-bottom-width: 2;
-        border-color: $primary;
-        width: 100%;
+        .input {
+            border-bottom-width: 2;
+            border-color: $primary;
+            width: 100%;
+        }
     }
 }
 
 .h1 {
     font-weight: bold;
     color: $primary;
+    font-family: 'Oswald', 'Oswald-Regular', 'Oswald-Bold';
 }
 
 .btn-flat {
@@ -71,3 +75,4 @@ ActionBar {
     // ios // android
     font-family: 'FontAwesome','Font-Awesome';
 }
+
