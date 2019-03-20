@@ -107,4 +107,7 @@ tns prepare android
 
 > [FontAwesome Icons](https://fontawesome.com/icons/bars?style=solid)
 > [Image Convertor](https://ezgif.com/) [1024 x 1024]
-- [For Generating Images for App_resources](https://www.img-bak.in/)
+> [For Generating Images for App_resources](https://www.img-bak.in/)
+
+NOTE:- 
+    -   if icons doesn't work for iOS than use 'tns prepare'
