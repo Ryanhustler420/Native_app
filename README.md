@@ -78,6 +78,14 @@ it will open launch.json file and where you can chaneg debug settings related to
 
 ##### Links
 - [NativeScript UI SideDrawer](https://www.npmjs.com/package/nativescript-ui-sidedrawer)
+- [For Generating Images for App_resources](http://nsimage.brosteins.com/)
+- [For Generating Images for App_resources](https://www.img-bak.in/)
+
+> Run this whenever you add new images into res folder
+```
+tns prepare android
+```
+
 
 ##### Issue Resolve
 
