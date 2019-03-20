@@ -102,3 +102,9 @@ tns prepare android
 ##### Using Sass
 
 > tns install sass
+
+##### Icons 
+
+> [FontAwesome Icons](https://fontawesome.com/icons/bars?style=solid)
+> [Image Convertor](https://ezgif.com/) [1024 x 1024]
+- [For Generating Images for App_resources](https://www.img-bak.in/)
