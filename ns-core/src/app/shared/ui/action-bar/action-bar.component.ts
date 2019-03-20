@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { isAndroid } from 'platform';
-import { Page } from "tns-core-modules/ui/page/page";
+import { Page, isAndroid } from "tns-core-modules/ui/page/page";
 import { RouterExtensions } from 'nativescript-angular/router';
 import { UIService } from '../ui.service';
 
@@ -40,8 +39,12 @@ export class ActionBarComponent implements OnInit {
         if (isAndroid) {
             const androidToolbar = this.page.actionBar.nativeView;
             const backButton = androidToolbar.getNavigationIcon();
+            let color = '#171717';
+            if (this.hasMenu) {
+                color = '#ffffff';
+            }
             if (backButton) {
-                backButton.setColorFilter(android.graphics.Color.parseColor('#171717'),
+                backButton.setColorFilter(android.graphics.Color.parseColor(color),
                     (<any>android.graphics).PorterDuff.Mode.SRC_ATOP);
             }
         }

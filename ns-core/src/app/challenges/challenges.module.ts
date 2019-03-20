@@ -7,17 +7,21 @@ import { TodayComponent } from './today/today.component';
 
 import { SharedModule } from './../shared/ui/shared.module';
 import { ChallengesRoutingModule } from './challenges-routing.module';
+// import { ChallengeActionsComponent } from './challenge-actions/challenge-actions.component';
+import { ChallengeActionModule } from './challenge-actions/challenge-action.module';
 
 @NgModule({
     declarations: [
         ChallengeTabsComponent,
         CurrentChallengeComponent,
         TodayComponent
+        // ChallengeActionsComponent
     ],
     imports: [
         NativeScriptCommonModule,
         ChallengesRoutingModule,
-        SharedModule
+        SharedModule,
+        ChallengeActionModule
     ],
     schemas: [
         NO_ERRORS_SCHEMA

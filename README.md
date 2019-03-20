@@ -52,6 +52,7 @@
 > ng g c shared/ui/action-bar
 > ng g c challenges/challenge-tabs
 > ng g c challenges/day-modal
+> ng g c challenges/challenge-actions
 
 ##### Packages
 
@@ -77,8 +78,18 @@ it will open launch.json file and where you can chaneg debug settings related to
 
 ##### Links
 - [NativeScript UI SideDrawer](https://www.npmjs.com/package/nativescript-ui-sidedrawer)
+- [For Generating Images for App_resources](http://nsimage.brosteins.com/)
+- [For Generating Images for App_resources](https://www.img-bak.in/)
+
+> Run this whenever you add new images into res folder
+```
+tns prepare android
+```
+
 
 ##### Issue Resolve
+
+> this bug happens when you add extra resources to the project
 
 - SideDrawer Bug
   - Delete These Files/Folder And than run ``npm install`` and run ``tns run android/ios --bundle``
@@ -87,3 +98,16 @@ it will open launch.json file and where you can chaneg debug settings related to
     - platform
     - package-lock.json
     - webpack.config.js
+
+##### Using Sass
+
+> tns install sass
+
+##### Icons 
+
+> [FontAwesome Icons](https://fontawesome.com/icons/bars?style=solid)
+> [Image Convertor](https://ezgif.com/) [1024 x 1024]
+> [For Generating Images for App_resources](https://www.img-bak.in/)
+
+NOTE:- 
+    -   if icons doesn't work for iOS than use 'tns prepare'
