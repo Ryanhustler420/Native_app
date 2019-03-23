@@ -26,9 +26,19 @@ export class AuthComponent implements OnInit {
             }),
             password: new FormControl(null, {
                 updateOn: 'blur',
-                validators: [Validators.required, Validators.maxLength(6)]
+                validators: [Validators.required, Validators.minLength(6)]
             }),
         });
+
+        this.form.get('email').statusChanges.subscribe(status => {
+            console.log(status);
+            this.emailControlIsValid = status === 'VALID';
+        })
+
+        this.form.get('password').statusChanges.subscribe(status => {
+            console.log(status);
+            this.passwordControlIsValid = status === 'VALID';
+        })
     }
 
     onSignin() {
@@ -37,13 +47,17 @@ export class AuthComponent implements OnInit {
     }
 
     onSubmit() {
-        this.emailEl.nativeElement.focus();
-        this.passwordEl.nativeElement.focus();
-        this.passwordEl.nativeElement.dismissSoftInput();
+        this.onDone();
 
         const email = this.form.get('email').value;
         const password = this.form.get('password').value;
         console.log(email, password);
+    }
+
+    onDone() {
+        this.emailEl.nativeElement.focus();
+        this.passwordEl.nativeElement.focus();
+        this.passwordEl.nativeElement.dismissSoftInput();
     }
 
 }
