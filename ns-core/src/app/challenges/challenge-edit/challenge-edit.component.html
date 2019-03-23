@@ -2,11 +2,13 @@
 <FlexboxLayout class="form">
     <StackLayout class="input-field">
         <Label class="label" text="Title"></Label>
-        <TextField class="input"></TextField>
+        <!-- [(ngModel)] can use inside TextField -->
+        <TextField class="input" returnKeyType="next" required ngModel #titleCtrl="ngModel"></TextField>
+        <Label *ngIf="!titleCtrl.valid && titleCtrl.touched" text="Please enter a valid title."></Label>
     </StackLayout>
     <StackLayout class="input-field">
         <Label class="label" text="Description"></Label>
-        <TextField class="input"></TextField>
+        <TextView class="input" returnKeyType="done" required></TextView>
     </StackLayout>
     <Button class="btn btn-primary" text=Save></Button>
 </FlexboxLayout>
