@@ -13,6 +13,7 @@ export class AuthComponent implements OnInit {
     form: FormGroup;
     emailControlIsValid = true;
     passwordControlIsValid = true;
+    isLogin = true;
     @ViewChild('passwordEl') passwordEl: ElementRef<TextField>;
     @ViewChild('emailEl') emailEl: ElementRef<TextField>;
 
@@ -49,9 +50,24 @@ export class AuthComponent implements OnInit {
     onSubmit() {
         this.onDone();
 
+        if (!this.form.valid) {
+            return;
+        }
+
         const email = this.form.get('email').value;
         const password = this.form.get('password').value;
-        console.log(email, password);
+        this.form.reset();
+        this.emailControlIsValid = true;
+        this.passwordControlIsValid = true;
+        if (this.isLogin) {
+            console.log('Logging in...');
+        } else {
+            console.log('Signing in...')
+        }
+    }
+
+    onSwitch() {
+        this.isLogin = !this.isLogin;
     }
 
     onDone() {

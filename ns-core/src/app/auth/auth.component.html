@@ -1,4 +1,4 @@
-<ns-action-bar title="Login" [showBackButton]="false" [hasMenu]="false"></ns-action-bar>
+<ns-action-bar [title]="isLogin ? 'Login' : 'Signup'" [showBackButton]="false" [hasMenu]="false"></ns-action-bar>
 <!-- <Button text="auth works!" class="btn btn-primary" (tap)="onSignin()"></Button> -->
 <!-- <Button text="auth works!" class="btn btn-primary" nsRouterLink="/today"></Button> -->
 <!-- Directive Approach -->
@@ -16,6 +16,7 @@
             hint="Min 6 Characters" formControlName="password" #passwordEl (returnPress)="onDone()"></TextField>
         <Label *ngIf="!passwordControlIsValid" text="Password Required"></Label>
     </StackLayout>
-    <Button [isEnabled]="form.valid" text="Login" class="btn btn-primary btn-rounded-lg" (tap)="onSubmit()"></Button>
+    <Button class="btn btn-flat" [text]="isLogin ? 'Signup' : 'Login'" (tap)="onSwitch()"></Button>
+    <Button [isEnabled]="form.valid" [text]="isLogin ? 'Login' : 'Signup'" class="btn btn-primary btn-rounded-lg" (tap)="onSubmit()"></Button>
 </StackLayout>
 <!-- <Button text="This nsRouterLink address syntex is incorrect dont use like this" class="btn btn-primary" nsRouterLink="/challenges/today" [clearHistory]="true"></Button> -->
