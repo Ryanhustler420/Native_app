@@ -4,6 +4,7 @@ import { ChallengeEditComponent } from './challenge-edit.component';
 import { NativeScriptCommonModule } from 'nativescript-angular/common';
 import { SharedModule } from '../../shared/ui/shared.module';
 import { NativeScriptRouterModule } from "nativescript-angular/router";
+import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 // when creating module check for component.html for what element or feature of nativescript is being in use
 // and than import those require imports
@@ -14,7 +15,8 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
         NativeScriptCommonModule,
         NativeScriptRouterModule,
         NativeScriptRouterModule.forChild([{ path: '', component: ChallengeEditComponent }]),
-        SharedModule
+        SharedModule,
+        NativeScriptFormsModule
     ],
     schemas: [
         NO_ERRORS_SCHEMA
