@@ -38,8 +38,14 @@ ActionBar {
 
         .input {
             border-bottom-width: 2;
-            border-color: $primary;
+            border-bottom-color: $primary;
             width: 100%;
+            color: black;
+        }
+
+        .input.ng-invalid.ng-touched {
+            border-bottom-color: red;
+            color: red;
         }
     }
 }
@@ -57,11 +63,6 @@ ActionBar {
     color: $primary;
 }
 
-
-.ng-invalid.ng-touched {
-    border-bottom-color: red;
-    color: red;
-}
 
 .drawer-container {
     background: linear-gradient(140deg, #2b0c72, #5c3fa0);
