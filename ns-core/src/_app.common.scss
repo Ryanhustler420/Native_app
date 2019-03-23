@@ -32,6 +32,10 @@ ActionBar {
             font-family: 'Oswald', 'Oswald-Regular', 'Oswald-Bold';
         }
 
+        .label.invalid {
+            color: red;
+        }
+
         .input {
             border-bottom-width: 2;
             border-color: $primary;
@@ -51,6 +55,12 @@ ActionBar {
     border-color: transparent;
     border-width: 1;
     color: $primary;
+}
+
+
+.ng-invalid.ng-touched {
+    border-bottom-color: red;
+    color: red;
 }
 
 .drawer-container {
