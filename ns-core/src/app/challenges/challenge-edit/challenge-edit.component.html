@@ -11,5 +11,5 @@
         <TextView class="input" returnKeyType="done" required ngModel #DescCtrl="ngModel"></TextView>
         <Label *ngIf="!DescCtrl.valid && DescCtrl.touched" text="Description is required"></Label>
     </StackLayout>
-    <Button class="btn btn-primary" text=Save [isEnabled]="titleCtrl.valid && DescCtrl.valid"></Button>
+    <Button class="btn btn-primary" text=Save [isEnabled]="titleCtrl.valid && DescCtrl.valid" (tap)="onSubmit(titleCtrl.value,DescCtrl.value)"></Button>
 </FlexboxLayout>
