@@ -42,11 +42,6 @@ export class AuthComponent implements OnInit {
         })
     }
 
-    onSignin() {
-        // old navigation stack will be clear
-        this.router.navigate(['/today'], { clearHistory: true });
-    }
-
     onSubmit() {
         this.onDone();
 
@@ -64,6 +59,8 @@ export class AuthComponent implements OnInit {
         } else {
             console.log('Signing in...')
         }
+
+        this.router.navigate(['/challenges']);
     }
 
     onSwitch() {
