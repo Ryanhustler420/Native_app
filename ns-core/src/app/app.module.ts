@@ -13,6 +13,7 @@ import { ChallengeActionModule } from './challenges/challenge-actions/challenge-
 import { SharedModule } from './shared/ui/shared.module';
 import { DayModalComponent } from './challenges/day-modal/day-modal.component';
 import { ReactiveFormsModule } from "@angular/forms";
+// import { ChallengeService } from './challenges/challenge.service';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";

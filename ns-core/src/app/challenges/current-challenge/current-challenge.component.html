@@ -16,8 +16,8 @@
             <Button class="btn btn-primary" text="Create one!" pageTransition="slideLeft" nsRouterLink="/challenges/replace"></Button>
         </StackLayout>
         <StackLayout *ngIf="currentChallenge">
-            <Label class="h1 text-center" text="Take a walk every day"></Label>
-            <Label class="body text-center" text="Walk for at least 20 minutes on everyday of the week"></Label>
+            <Label class="h1 text-center" [text]="currentChallenge.title"></Label>
+            <Label class="body text-center" [text]="currentChallenge.description"></Label>
         </StackLayout>
         <GridLayout rows="auto,*,*,*,*,*,*" columns="*,*,*,*,*,*,*" *ngIf="currentChallenge">
             <Label class="text-center week-day-label" width="100%" *ngFor="let weekDay of weekDays; let i = index"
