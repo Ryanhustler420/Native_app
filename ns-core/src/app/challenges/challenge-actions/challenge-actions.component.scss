@@ -27,3 +27,19 @@ FlexboxLayout {
     font-size: 30;
     margin-top: 15;
 }
+
+.animate-button {
+    animation-name: slide-up;
+    animation-iteration-count: 1;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(30);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
