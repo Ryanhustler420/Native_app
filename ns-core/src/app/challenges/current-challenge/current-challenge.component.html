@@ -22,7 +22,7 @@
         <GridLayout rows="auto,*,*,*,*,*,*" columns="*,*,*,*,*,*,*" *ngIf="currentChallenge">
             <Label class="text-center week-day-label" width="100%" *ngFor="let weekDay of weekDays; let i = index"
                 [text]="weekDay" row="0" [col]="i"></Label>
-            <FlexboxLayout (tap)="onChangeStatus(day)" class="day" [ngClass]="{'not-settable': !getIsSettable(day.dayInMonth)}"
+            <FlexboxLayout (tap)="onChangeStatus(day)" class="day" [ngClass]="{'not-settable': !getIsSettable(day.dayInMonth), completed: day.status === 1 , failed: day.status === 2 }"
                 [row]="getRow(i, day)" *ngFor="let day of currentChallenge.days; let i = index" [col]="day.dayInWeek">
                 <Label [text]="day.dayInMonth"></Label>
             </FlexboxLayout>

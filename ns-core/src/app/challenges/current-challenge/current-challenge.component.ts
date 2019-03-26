@@ -5,7 +5,7 @@ import { UIService } from "~/app/shared/ui/ui.service";
 import { ChallengeService } from './../challenge.service';
 import { Challenge } from './../challenge.model';
 import { Subscription } from 'rxjs';
-import { Day } from "../day.model";
+import { Day, DayStatus } from "../day.model";
 
 @Component({
     selector: 'ns-current-challenge',
@@ -49,8 +49,8 @@ export class CurrentChallengeComponent implements OnInit, OnDestroy {
             fullscreen: true,
             context: { date: day.date },
             viewContainerRef: this.uiService.getRootVCRef() ? this.uiService.getRootVCRef() : this._vcRef
-        }).then((status: string) => {
-            console.log(status);
+        }).then((status: DayStatus) => {
+            this.challengeService.updateDayStatus(day.dayInMonth, status);
         })
     }
 

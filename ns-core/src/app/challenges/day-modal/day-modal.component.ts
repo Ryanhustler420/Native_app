@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalDialogParams } from 'nativescript-angular/modal-dialog';
+import { DayStatus } from '../day.model';
 
 @Component({
     selector: 'ns-day-modal',
@@ -16,7 +17,7 @@ export class DayModalComponent implements OnInit {
         this.loadedDate = (this.modalParams.context as { date: Date }).date
     }
 
-    onHandleInput(action: 'complete' | 'fail' | 'cancle') {
+    onHandleInput(action: DayStatus) {
         // this data can be read from the place where we open the dialog
         this.modalParams.closeCallback(action);
     }
