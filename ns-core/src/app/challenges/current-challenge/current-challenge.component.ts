@@ -1,7 +1,10 @@
-import { Component, ViewContainerRef, OnInit } from "@angular/core";
+import { Component, ViewContainerRef, OnInit, OnDestroy } from "@angular/core";
 import { ModalDialogService } from 'nativescript-angular/modal-dialog';
 import { DayModalComponent } from "../day-modal/day-modal.component";
 import { UIService } from "~/app/shared/ui/ui.service";
+import { ChallengeService } from './../challenge.service';
+import { Challenge } from './../challenge.model';
+import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'ns-current-challenge',
@@ -12,17 +15,31 @@ import { UIService } from "~/app/shared/ui/ui.service";
     ],
     moduleId: module.id
 })
-export class CurrentChallengeComponent implements OnInit {
+export class CurrentChallengeComponent implements OnInit, OnDestroy {
 
     weekDays = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
-    days: { dayInMonth: number, dayInWeek: number }[] = [];
+    currentChallenge: Challenge
     private currentMonth: number;
     private currentYear: number;
+    private curChallengeSub: Subscription
 
-    constructor(private modalDialog: ModalDialogService, private _vcRef: ViewContainerRef, private uiService: UIService) { }
+    constructor(
+        private modalDialog: ModalDialogService,
+        private _vcRef: ViewContainerRef,
+        private uiService: UIService,
+        private challengeService: ChallengeService
+    ) { }
 
     ngOnInit() {
+        this.curChallengeSub = this.challengeService.currentChallenge.subscribe(challenge => {
+            this.currentChallenge = challenge;
+        });
+    }
 
+    ngOnDestroy() {
+        if (this.curChallengeSub) {
+            this.curChallengeSub.unsubscribe();
+        }
     }
 
     onChangeStatus() {
