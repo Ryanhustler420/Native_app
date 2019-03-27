@@ -1,9 +1,11 @@
 <FlexboxLayout>
-    <Button *ngIf="action !== 'complete'" class="btn btn-success btn-rounded-lg" height="60" text="Complete" (tap)="onAction('complete')"></Button>
+    <Button *ngIf="action !== 'complete'" [isEnabled]="!done" class="btn btn-success btn-rounded-lg" height="60" text="Complete"
+        (tap)="onAction('complete')"></Button>
     <StackLayout *ngIf="action === 'complete'" height="60" class="btn btn-success btn-rounded-lg">
         <Label text="&#xf00c;" horizontalAlignment="center" class="fa btn-alt animate-button"></Label>
     </StackLayout>
-    <Button *ngIf="action !== 'fail'" class="btn btn-fail btn-rounded-lg" height="60" text="Failed" (tap)="onAction('fail')"></Button>
+    <Button *ngIf="action !== 'fail'" [isEnabled]="!done" class="btn btn-fail btn-rounded-lg" height="60" text="Failed"
+        (tap)="onAction('fail')"></Button>
     <StackLayout *ngIf="action === 'fail'" height="60" class="btn btn-fail btn-rounded-lg">
         <Label text="&#xf00d;" horizontalAlignment="center" class="fa btn-alt animate-button"></Label>
     </StackLayout>

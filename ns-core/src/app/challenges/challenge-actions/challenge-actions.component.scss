@@ -12,15 +12,24 @@ FlexboxLayout {
 }
 
 .btn-success {
-    background: $success;
+    background-color: $success;
     border-color: $success;
+    border-width: 1;
     color: $white;
 }
 
 .btn-fail {
-    background: $fail;
+    background-color: $fail;
     border-color: $fail;
+    border-width: 1;
     color: $white;
+}
+
+.btn-success:disabled,
+.btn-fail:disabled {
+    background-color: #ccc;
+    color: #777777;
+    border-color: #ccc;
 }
 
 .btn-alt {
